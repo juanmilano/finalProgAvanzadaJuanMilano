@@ -84,10 +84,10 @@ String tipoCuenta): ctor
       <w>470</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>Class::CrearCaja
+    <panel_attributes>Class::CajaDeAhorro
 --
 --
-~CrearCaja(//constructor 
+~CajaDeAhorro(//constructor 
 int numCuenta, //constructor 
 int nip, //constructor 
 int saldo, //constructor 

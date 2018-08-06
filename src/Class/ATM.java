@@ -24,15 +24,15 @@ public class ATM {
 	        codigo = 10010;
 	        saldo = 0;
 	        type= "cajaAhorro";        
-	        cliente.addCuenta(new CrearCaja(aNumber,codigo,saldo,type)); 	       
+	        cliente.addCuenta(new CajaDeAhorro(aNumber,codigo,saldo,type)); 	       
             Scanner in = new Scanner(System.in); //Creo el objeto Scanner//
             int userMenu;
             boolean quit = false;
         
             System.out.println("Bienvenido a ATM Cajeros: \n");
-            System.out.print("Ingresar el n煤mero de Cuenta para comenzar : ");
+            System.out.print("Ingresar el n鷐ero de Cuenta para comenzar : ");
             tmp=in.nextInt();
-            System.out.print("Ingresar su c贸digo NIP : ");
+            System.out.print("Ingresar su c骴igo NIP : ");
             psw=in.nextInt();
 
             
@@ -41,13 +41,13 @@ public class ATM {
             	System.out.println("Los datos ingresados no son correctos!");
             	System.out.print("\n**************************** \n");
             	System.out.println("Bienvenido a ATM Cajeros: ");
-                System.out.print("Ingresar el n煤mero de Cuenta para comenzar : ");
+                System.out.print("Ingresar el n鷐ero de Cuenta para comenzar : ");
                 tmp=in.nextInt(); //le digo que va a leer un INT//
-                System.out.print("Ingresar su c贸digo NIP : ");
+                System.out.print("Ingresar su c骴igo NIP : ");
                 psw=in.nextInt();
             	
             }else{
-            System.out.println("Hola " + cliente.getNombre() + " que transacci贸n desea realizar? \n");
+            System.out.println("Hola " + cliente.getNombre() + " que transacci髇 desea realizar? \n");
             
             do {
                   
@@ -56,13 +56,13 @@ public class ATM {
                   System.out.println("2. Retirar Dinero");
                   System.out.println("3. Consultar Saldo");
                   System.out.println("0. Salir: \n");
-                  System.out.print("Elegir transacci贸n : ");
+                  System.out.print("Elegir transacci髇 : ");
                   userMenu = in.nextInt();
                   switch (userMenu) {
                                 
                 
                 case 1: // Depositar
-                    System.out.print("Entrar el c贸digo de NIP : ");
+                    System.out.print("Entrar el c骴igo de NIP : ");
                     psw=in.nextInt();
                  if(psw == codigo ){
                  System.out.print("Ingresa la Cantidad que desea Depositar: ");
@@ -71,11 +71,11 @@ public class ATM {
                  System.out.println("\t Deposito Exitoso!");
               }                
                      else
-                    System.out.println("C贸digo NIP incorrecto");          
+                    System.out.println("C骴igo NIP incorrecto");          
                    break;
                     
                   case 2: // Retirar                      
-                      System.out.print("Entrar el c贸digo de NIP : ");
+                      System.out.print("Entrar el c骴igo de NIP : ");
                       psw=in.nextInt();
                    if(psw == codigo ){                         
                              if(saldo==0)
@@ -95,24 +95,24 @@ public class ATM {
                              }
                           }
                              else
-                             System.out.println("C贸digo NIP Incorrecto");  
+                             System.out.println("C骴igo NIP Incorrecto");  
                         break;
      
                   case 3: // Consultar Saldo 
-                      System.out.print("Entrar el c贸digo de NIP : ");
+                      System.out.print("Entrar el c骴igo de NIP : ");
                       psw=in.nextInt();
                    if(psw == codigo){
                              System.out.println("Su Saldo es : "+ saldo);
                              }
                              else
-                             System.out.println("C贸digo NIP Incorrecto");                         
+                             System.out.println("C骴igo NIP Incorrecto");                         
                       break;
                       
                   case 0:
                 	  	quit = true;
                         break;
                   default:
-                        System.out.println("La opci贸n ingresada No Existe!");
+                        System.out.println("La opci髇 ingresada No Existe!");
                         break;
                   }
                   System.out.println("\n");

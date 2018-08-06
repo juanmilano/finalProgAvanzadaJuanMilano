@@ -1,7 +1,7 @@
 package Class;
 
-public class CrearCaja extends Cuenta{
-	    CrearCaja(int numCuenta,int nip,int saldo,String tipoCuenta){ //constructor 
+public class CajaDeAhorro extends Cuenta{
+	    CajaDeAhorro(int numCuenta,int nip,int saldo,String tipoCuenta){ //constructor 
 	            this.numCuenta = numCuenta;
 	            this.saldo = saldo;
 	            this.nip = nip;
