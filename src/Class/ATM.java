@@ -14,6 +14,7 @@ public class ATM {
         int retirar=0;
         int aNumber; 
         int codigo;
+   
  
         
 	        Cliente cliente;
@@ -65,7 +66,8 @@ public class ATM {
                     psw=in.nextInt();
                  if(psw == codigo ){
                  System.out.print("Ingresa la Cantidad que desea Depositar: ");
-                 saldo=in.nextInt();
+                 saldo=saldo+in.nextInt();
+                 
                  System.out.println("\t Deposito Exitoso!");
               }                
                      else
