@@ -1,8 +1,7 @@
 package Class;
 
 public class CrearCaja extends Cuenta{
-	    CrearCaja(String nombreCliente,int numCuenta,int nip,int saldo,String tipoCuenta){ //  
-	            this.nombreCliente = nombreCliente;
+	    CrearCaja(int numCuenta,int nip,int saldo,String tipoCuenta){ //constructor 
 	            this.numCuenta = numCuenta;
 	            this.saldo = saldo;
 	            this.nip = nip;
@@ -10,23 +9,15 @@ public class CrearCaja extends Cuenta{
 	    }
 	    
 
-	    void insertar(String nombreCliente,int nip,int numCuenta,int saldo,String tipoCuenta){ // input user name, account number and type 
-	        this.nombreCliente = nombreCliente;
+	    public void insertar(int nip,int numCuenta,int saldo,String tipoCuenta){ 
 	        this.tipoCuenta = tipoCuenta;
-	        this.numCuenta = numCuenta;// generate random number 
+	        this.numCuenta = numCuenta;
 	        this.saldo = saldo;
 	        this.nip = nip;
 	        saldo = 0;
 	    }
 	    
-	    void display_details(){
-	        System.out.println("Nombre de Cliente:" +nombreCliente);
-	        System.out.println("Número de Cuenta: "+numCuenta);
-	        System.out.println("Código Nip : "+nip);
-	        System.out.println("Saldo de Cuenta : "+saldo); 
-	        System.out.println("Tipo de Cuenta : "+tipoCuenta);
-	    }
-	 
+	    	//metodos sobrescritos//
 	        public void depositar(int numCuenta,int efectivo){                 
 	                saldo=efectivo;    
 	        }

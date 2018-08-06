@@ -4,17 +4,18 @@ public class Cliente {
 
 	private String nombre;
 	private String apellido;
-	private Cuenta[] cuenta;
+	private Cuenta[] cuenta; //Asociacion el cliente tiene una cuenta//
 	private int cantCuentas;
 	
     public Cliente (String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        // initialize accounts array
-        cuenta = new Cuenta[10];
+        // inicializar el array de cuenta//
+        cuenta = new Cuenta[1];
         cantCuentas = 0;
     }
     
+    //getters//
     public String getNombre () {
     	return nombre;
     }
@@ -23,6 +24,7 @@ public class Cliente {
     	return apellido;
     }
     
+    //agregar cuenta//
     public void addCuenta (Cuenta acct) {
         int i = cantCuentas++;
         cuenta[i] = acct;
@@ -32,9 +34,6 @@ public class Cliente {
         return cantCuentas;
     }
 
-    public Cuenta getCuenta(int cuenta_index) {
-        return cuenta[cuenta_index];
-    }
 
 }
 

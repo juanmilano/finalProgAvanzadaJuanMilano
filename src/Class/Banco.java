@@ -11,6 +11,7 @@ public class Banco {
     
     private static final Banco instance = new Banco();
     
+    //agregar cliente//
     public void addCliente(String nombre, String apellido) {
         int i = cantClientes++;
         clientes[i] = new Cliente(nombre,apellido);
