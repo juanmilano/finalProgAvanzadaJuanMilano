@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>260</y>
+      <w>320</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>/Class::Cuenta/
+--
+#tipoCuenta: String
+#numCuenta: int
+#nip: int
+#saldo: int
+--
++Cuenta(): ctor
++Cuenta(//Constructor//
+int numCuenta, //Constructor//
+int nip, //Constructor//
+int saldo, //Constructor//
+String tipoCuenta): ctor
++getNumCuenta(): int
++depositar(int numCuenta, int efectivo): void
++retirar(int retiro): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>120</y>
+      <w>320</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Class::Cliente
+--
+-nombre: String
+-apellido: String
+-cuenta: Cuenta[]
+-cantCuentas: int
+--
++Cliente(String nombre, String apellido): ctor
++getNombre(): String
++getApellido(): String
++addCuenta(Cuenta acct): void
++getCantidadCuentas(): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>0</y>
+      <w>350</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Class::Banco
+--
+-clientes: Cliente[]
+-cantClientes: int
+-instance = new Banco(): Banco
+--
+-Banco(): ctor
++addCliente(String nombre, String apellido): void
++getCantClientes(): int
++getCliente(int cliente_index): Cliente
++getInstance(): Banco
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>600</y>
+      <w>470</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Class::CrearCaja
+--
+--
+~CrearCaja(//constructor 
+int numCuenta, //constructor 
+int nip, //constructor 
+int saldo, //constructor 
+String tipoCuenta): ctor
++insertar(int nip, int numCuenta, int saldo, String tipoCuenta): void
++depositar(int numCuenta, int efectivo): void
++retirar(int retiro): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>930</x>
+      <y>190</y>
+      <w>190</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Class::ATM
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>530</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>90</y>
+      <w>120</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>200</y>
+      <w>610</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>590.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>180</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>260</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;30.0</additional_attributes>
+  </element>
+</diagram>
